@@ -1,9 +1,9 @@
 class UserMailer < ActionMailer::Base
-  default from: "from@example.com"
+  default from: "whatever@email.com"
 
-  def test_email
-    mail(to: 'whoever@email.com', from: 'whoever@otheremail.com', subject: 'Whatever') do |format|
-      format.html { render text: "Here's some text" }
+  def test(text="Some Text")
+    mail(to: 'whoever@email.com', subject: 'Whatever') do |format|
+      format.html { render text: text }
     end
   end
 end
