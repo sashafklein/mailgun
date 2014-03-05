@@ -1,4 +1,6 @@
 Mailgun::Application.routes.draw do
+
+  post :incoming, to: 'incoming_controller#create'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
